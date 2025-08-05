@@ -1,0 +1,272 @@
+#app {
+  height: 100%;
+}
+
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Add custom styles for the Swiper component within the ParentDashboard */
+.mySwiper1 {
+  width: 100%;
+  height: 800px; /* Adjust height as needed */
+  margin-top: 20px; /* Adjust margin as needed */
+}
+
+.mySwiper1 .swiper-pagination-bullet {
+  background: #000 !important;
+  margin-left: 100px !important;
+}
+
+.mySwiper1 .swiper-pagination-bullet-active {
+  background: #ff9800 !important;
+}
+.test {
+  width: 100% !important;
+  height: 900px;
+}
+@media only screen and (max-width: 768px) {
+  .mySwiper1 {
+    width: 100%;
+    height: 1000px;
+  }
+}
+
+@keyframes centerGrow1 {
+  0% {
+    transform: translate(-50%, -50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+}
+
+@keyframes centerShrink1 {
+  0% {
+    font-size: 20px;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+  100% {
+    font-size: 14px;
+    z-index: -99;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+  }
+}
+
+.centerGrow1 {
+  animation: centerGrow1 2s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+}
+
+.centerShrink1 {
+  animation: centerShrink1 2s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+}
+
+.centerPart {
+  display: none;
+  opacity: 0;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.centerVisible1 {
+  display: block;
+  opacity: 1;
+}
+
+@keyframes centerGrow {
+  0% {
+    width: 0px;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+  }
+  100% {
+    width: 800px;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+}
+
+@keyframes centerShrink {
+  0% {
+    width: 800px;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+  100% {
+    width: 0px;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+  }
+}
+
+.centerGrow {
+  animation: centerGrow 1s ease-out forwards;
+}
+
+.centerShrink {
+  animation: centerShrink 1s ease-out forwards;
+}
+
+/* Keyframes for left and right movement */
+@keyframes leftMove {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-48%);
+  }
+}
+
+@keyframes leftMoveReverse {
+  0% {
+    transform: translateX(-48%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes rightMove {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(45%);
+  }
+}
+
+@keyframes rightMoveReverse {
+  0% {
+    transform: translateX(45%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Animation classes */
+.leftMove {
+  animation: leftMove 1s ease-out forwards;
+}
+
+.leftMoveReverse {
+  animation: leftMoveReverse 1s ease-out forwards;
+}
+
+.rightMove {
+  animation: rightMove 1s ease-out forwards;
+}
+
+.rightMoveReverse {
+  animation: rightMoveReverse 1s ease-out forwards;
+}
+
+/* Initial states */
+.center {
+  display: none;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.centerVisible {
+  display: block;
+  opacity: 1;
+}
+
+.side {
+  transition: transform 2s ease-out;
+  z-index: 100;
+}
+
+@media only screen and (max-width: 1920px) {
+  @keyframes centerGrow {
+    0% {
+      width: 0px;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+    }
+    100% {
+      width: 550px;
+      transform: translate(-50%, -50%);
+      opacity: 1;
+    }
+  }
+  .centerPart {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  @keyframes centerShrink {
+    0% {
+      width: 550px;
+      transform: translate(-50%, -50%);
+      opacity: 1;
+    }
+    100% {
+      width: 0px;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+    }
+  }
+}
+@media only screen and (max-width: 1644px) {
+  @keyframes centerGrow {
+    0% {
+      width: 0px;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+    }
+    100% {
+      width: 500px;
+      transform: translate(-50%, -50%);
+      opacity: 1;
+    }
+  }
+  @keyframes centerShrink {
+    0% {
+      width: 500px;
+      transform: translate(-50%, -50%);
+      opacity: 1;
+    }
+    100% {
+      width: 0px;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+    }
+  }
+}
+
