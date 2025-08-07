@@ -1,0 +1,24 @@
+.apexcharts-legend .apexcharts-align-center .apx-legend-position-bottom{
+    justify-content: left !important;
+}
+
+.apexcharts-legend{
+ justify-content: left !important;
+}
+
+.apexcharts-legend.apx-legend-position-bottom.apexcharts-align-center {
+    justify-content: flex-start !important;
+  }
+  .apexcharts-legend {
+    display: grid !important;
+    grid-template-columns: repeat(2, auto);
+    justify-content: start !important;
+    row-gap: 6px;
+    column-gap: 24px;
+    padding: 0px !important;
+  }
+  @media (max-width: 600px) {
+    .apexcharts-legend {
+      grid-template-columns: repeat(1, auto) !important;
+    }
+  }

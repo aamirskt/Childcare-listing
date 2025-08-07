@@ -1,0 +1,17 @@
+.youtube-container .lyt {
+  border-radius: 30px !important;
+  overflow: hidden !important;
+  position: relative;
+}
+
+.youtube-container .lyt::before,
+.youtube-container .lyt::after {
+  border-radius: 30px !important;
+}
+
+.youtube-container .yt-lite {
+  border-radius: 30px !important;
+  overflow: hidden !important;
+  aspect-ratio: 16 / 9; /* Ensures responsive scaling */
+  background-size: cover !important;
+}
